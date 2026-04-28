@@ -1,3 +1,13 @@
+def get_mark(student):
+    while True:
+        try:
+            mark = float(input(f"Enter marks for {student}: "))
+            if 0 <= mark <= 100:
+                return mark
+            else:
+                print("Error: Score must be between 0 and 100. PLEASE TRY AGAIN.")
+        except ValueError:
+            print("Error: Invalid input. Please enter a numeric value.")
 
 Student1 = get_mark("Student 1")
 Student2 = get_mark("Student 2")
